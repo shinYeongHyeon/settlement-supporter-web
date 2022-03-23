@@ -7,6 +7,7 @@ import sveltePreprocess from 'svelte-preprocess';
 import typescript from '@rollup/plugin-typescript';
 import css from 'rollup-plugin-css-only';
 
+const svelteConfig = require('./svelte.config.js');
 const production = !process.env.ROLLUP_WATCH;
 
 function serve() {
@@ -44,7 +45,8 @@ export default {
 			compilerOptions: {
 				// enable run-time checks when not in production
 				dev: !production
-			}
+			},
+			...svelteConfig
 		}),
 		// we'll extract any component CSS out into
 		// a separate file - better for performance
