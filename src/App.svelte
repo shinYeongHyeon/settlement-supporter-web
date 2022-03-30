@@ -4,4 +4,12 @@
   import { routes } from './router/router';
 </script>
 
-<Router {routes} />
+<main>
+    <Router {routes} />
+</main>
+
+<style>
+    main {
+        padding: 2em 1em;
+    }
+</style>
