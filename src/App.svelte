@@ -1,5 +1,7 @@
 <script lang="ts">
-	import Routing from './router/Routing.svelte';
+  import { Router } from 'svelte-router-spa';
+
+  import { routes } from './router/router';
 </script>
 
-<Routing />
+<Router {routes} />
