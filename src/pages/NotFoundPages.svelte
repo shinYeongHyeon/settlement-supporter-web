@@ -1,16 +1,13 @@
 <script>
-    import { Headline, Subhead } from 'attractions';
-    import { navigateTo } from 'svelte-router-spa';
+  import { Headline, Subhead } from 'attractions';
 
-    function backToHome() {
-      navigateTo('/');
-    }
+  import RedirectHome from '../component/RedirectToHome.svelte';
 </script>
 
 <div>
     <Headline>Oops..</Headline>
     <Subhead>
         I think you access wrong URL... T.T<br />
-        <span on:click={backToHome}>Back to HOME</span>
+        <RedirectHome message="Back to home"/>
     </Subhead>
 </div>
