@@ -1,7 +1,5 @@
 <script lang="ts">
-	import Login from './pages/Login.svelte';
+	import Routing from './router/Routing.svelte';
 </script>
 
-<main>
-	<Login />
-</main>
+<Routing />
