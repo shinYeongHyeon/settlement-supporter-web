@@ -2,10 +2,11 @@
     import { Headline, Tabs } from 'attractions';
 
     import Group from "../../interfaces/Group";
-    import SSWFlexBox from '../../layout/SSWFlexBox/SSWFlexBox.svelte';
+    import SSWFlexBox from '../../component/layout/SSWFlexBox/SSWFlexBox.svelte';
     import SSWButton from '../../component/SSWButton/SSWButton.svelte';
 
     export let groups: Group[];
+    export let addGroup: () => void;
 
     let selectedGroup = '';
 </script>
@@ -22,6 +23,7 @@
 			filled
 			small
 			message="+ 추가하기"
+			on:click={addGroup}
 		/>
 	</SSWFlexBox>
 </div>

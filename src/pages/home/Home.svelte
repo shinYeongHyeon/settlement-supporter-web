@@ -1,7 +1,12 @@
 <script lang="ts">
+    import MainLayout from '../../layout/MainLayout.svelte';
     import Group from '../../interfaces/Group.ts';
     import GroupNotExistHome from './GroupNotExistHome.svelte';
     import GroupExistHome from './GroupExistHome.svelte';
+
+    function addGroup() {
+        alert('click AddGroup');
+    }
 
     const groups: Group[] = [
         {
@@ -15,10 +20,13 @@
     ];
 </script>
 
-<div>
+<MainLayout>
     {#if groups.length === 0}
         <GroupNotExistHome />
     {:else}
-        <GroupExistHome groups={groups} />
+        <GroupExistHome
+            groups={groups}
+            addGroup={addGroup}
+        />
     {/if}
-</div>
+</MainLayout>
