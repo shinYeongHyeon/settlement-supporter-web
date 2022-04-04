@@ -1,6 +1,6 @@
-import Home from '../pages/Home.svelte';
-import Login from '../pages/Login.svelte';
-import NotFoundPages from '../pages/NotFoundPages.svelte';
+import Home from '../pages/home/Home.svelte';
+import Login from '../pages/login/Login.svelte';
+import NotFoundPages from '../pages/error/NotFoundPages.svelte';
 
 const routes = [
   {

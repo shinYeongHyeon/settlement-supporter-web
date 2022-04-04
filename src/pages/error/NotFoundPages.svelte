@@ -1,7 +1,7 @@
 <script>
   import { Headline, Subhead } from 'attractions';
 
-  import RedirectHome from '../component/RedirectToHome.svelte';
+  import RedirectHome from '../../component/RedirectToHome.svelte';
 </script>
 
 <div>
