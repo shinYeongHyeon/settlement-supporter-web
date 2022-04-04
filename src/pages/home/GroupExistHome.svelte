@@ -1,11 +1,10 @@
 <script lang="ts">
     import { Headline, Tabs } from 'attractions';
 
-    import Group from "../../interfaces/Group";
     import SSWFlexBox from '../../component/layout/SSWFlexBox/SSWFlexBox.svelte';
     import SSWButton from '../../component/SSWButton/SSWButton.svelte';
+    import { groups } from '../../store/group/group';
 
-    export let groups: Group[];
     export let addGroup: () => void;
 
     let selectedGroup = '';
@@ -16,7 +15,7 @@
 	<SSWFlexBox y_center>
 		<Tabs
 			name="groups"
-			items={groups.map((group) => group.groupName)}
+			items={$groups.map((group) => group.groupName)}
 			bind:value={selectedGroup}
 		/> &nbsp;
 		<SSWButton
