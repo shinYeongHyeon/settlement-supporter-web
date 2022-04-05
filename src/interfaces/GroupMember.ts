@@ -1,6 +1,6 @@
-interface Member {
+interface GroupMember {
   memberId: string;
   memberName: string;
 }
 
-export default Member;
+export default GroupMember;
