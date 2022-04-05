@@ -1,7 +1,7 @@
 <script lang="ts">
     import MainLayout from '../../layout/MainLayout.svelte';
-    import GroupNotExistHome from './GroupNotExistHome.svelte';
-    import GroupExistHome from './GroupExistHome.svelte';
+    import HomeWhenNotExistGroup from './HomeWhenNotExistGroup.svelte';
+    import HomeWhenExistGroup from './HomeWhenExistGroup.svelte';
     import { groups } from '../../store/group/group';
 
     let selectedGroupName = '';
@@ -39,9 +39,9 @@
 
 <MainLayout>
     {#if $groups.length === 0}
-        <GroupNotExistHome addGroup={addGroup}/>
+        <HomeWhenNotExistGroup addGroup={addGroup}/>
     {:else}
-        <GroupExistHome
+        <HomeWhenExistGroup
             addGroup={addGroup}
             selectedGroupName={selectedGroupName}
             selectedGroup={selectedGroup}
