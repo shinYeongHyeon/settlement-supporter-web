@@ -14,10 +14,8 @@
 
 <MainLayout>
     {#if $groups.length === 0}
-        <GroupNotExistHome />
+        <GroupNotExistHome addGroup={addGroup}/>
     {:else}
-        <GroupExistHome
-            addGroup={addGroup}
-        />
+        <GroupExistHome addGroup={addGroup} />
     {/if}
 </MainLayout>
