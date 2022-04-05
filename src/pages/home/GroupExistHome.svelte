@@ -6,8 +6,7 @@
     import { groups } from '../../store/group/group';
 
     export let addGroup: () => void;
-
-    let selectedGroup = '';
+    export let selectedGroup = '';
 </script>
 
 <div>

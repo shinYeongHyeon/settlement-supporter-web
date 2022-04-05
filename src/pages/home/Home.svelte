@@ -5,17 +5,24 @@
     import { groups } from '../../store/group/group';
 
     function addGroup() {
+        let createdGroupName = `groupName${$groups.length}`;
         $groups = [...$groups, {
             groupId: `randomId${$groups.length}`,
-            groupName: `groupName${$groups.length}`,
+            groupName: createdGroupName,
         }];
+        selectedGroup = createdGroupName;
     }
+
+    let selectedGroup = '';
 </script>
 
 <MainLayout>
     {#if $groups.length === 0}
         <GroupNotExistHome addGroup={addGroup}/>
     {:else}
-        <GroupExistHome addGroup={addGroup} />
+        <GroupExistHome
+            addGroup={addGroup}
+            selectedGroup={selectedGroup}
+        />
     {/if}
 </MainLayout>
