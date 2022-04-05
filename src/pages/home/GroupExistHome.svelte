@@ -9,7 +9,7 @@
     export let selectedGroupName = '';
     export let selectedGroup = null;
     export let addMember: () => void;
-    export let onChangeTab: (value, event) => void;
+    export let onChangeTab: (value) => void;
 </script>
 
 <div>
