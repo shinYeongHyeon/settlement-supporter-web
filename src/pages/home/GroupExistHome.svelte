@@ -33,10 +33,12 @@
 			그룹에 속한 인원이 없습니다.
 			추가해주세요.
 		{:else}
+			그룹원 :
 			{#each selectedGroup.members as groupMember}
-				{groupMember.memberName}
+				<!--TODO: 그룹멤버 컴포넌트-->
+				{groupMember.memberName}&nbsp;
 			{/each}
 		{/if}
-		<SSWButton message="test" on:click={addMember} />
+		<SSWButton message="+ 그룹 인원 추가하기" on:click={addMember} />
 	</SSWFlexBox>
 </div>
