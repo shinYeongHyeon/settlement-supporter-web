@@ -1,5 +1,5 @@
 <script lang="ts">
-    import { Headline, Tabs } from 'attractions';
+    import { Headline, Tabs, Table } from 'attractions';
 
     import SSWFlexBox from '../../component/layout/SSWFlexBox/SSWFlexBox.svelte';
     import SSWButton from '../../component/SSWButton/SSWButton.svelte';
@@ -10,6 +10,13 @@
     export let selectedGroup = null;
     export let addMember: () => void;
     export let onChangeTab: (value) => void;
+
+    const settlementTableHeader = [
+		{ text: '일시', value: 'date' },
+		{ text: '내용', value: 'content' },
+		{ text: '결제자', value: 'paidMember' },
+		{ text: '비고', value: 'memo' }
+	];
 </script>
 
 <div>
@@ -40,5 +47,11 @@
 			{/each}
 		{/if}
 		<SSWButton message="+ 그룹 인원 추가하기" on:click={addMember} />
+	</SSWFlexBox>
+	<SSWFlexBox>
+		<SSWButton message="+ 정산내역 추가하기" />
+	</SSWFlexBox>
+	<SSWFlexBox>
+		<Table headers={settlementTableHeader} />
 	</SSWFlexBox>
 </div>
