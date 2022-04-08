@@ -46,10 +46,10 @@
 				{groupMember.memberName}&nbsp;
 			{/each}
 		{/if}
-		<SSWButton message="+ 그룹 인원 추가하기" on:click={addMember} />
+		<SSWButton message="+ 그룹 인원 추가하기" small on:click={addMember} />
 	</SSWFlexBox>
 	<SSWFlexBox>
-		<SSWButton message="+ 정산내역 추가하기" />
+		<SSWButton message="+ 정산내역 추가하기" small />
 	</SSWFlexBox>
 	<SSWFlexBox>
 		<Table headers={settlementTableHeader} />
