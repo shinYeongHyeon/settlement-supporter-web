@@ -1,5 +1,5 @@
 <script lang="ts">
-    import { Headline, Tabs, Table } from 'attractions';
+    import { Headline, Tabs, Table, Modal, Dialog } from 'attractions';
 
     import SSWFlexBox from '../../component/layout/SSWFlexBox/SSWFlexBox.svelte';
     import SSWButton from '../../component/SSWButton/SSWButton.svelte';
@@ -17,6 +17,8 @@
 		{ text: '결제자', value: 'paidMember' },
 		{ text: '비고', value: 'memo' }
 	];
+
+    let modalOpen = false;
 </script>
 
 <div>
@@ -46,7 +48,12 @@
 				{groupMember.memberName}&nbsp;
 			{/each}
 		{/if}
-		<SSWButton message="+ 그룹 인원 추가하기" small on:click={addMember} />
+		<SSWButton message="+ 그룹 인원 추가하기" small on:click={() => modalOpen = true} />
+		<Modal bind:open={modalOpen} let:closeCallback>
+			<Dialog title="Hello?" {closeCallback}>
+				It's me
+			</Dialog>
+		</Modal>
 	</SSWFlexBox>
 	<SSWFlexBox>
 		<SSWButton message="+ 정산내역 추가하기" small />
